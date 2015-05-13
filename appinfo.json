@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "fergmastaflex@gmail.com",
+    "longName": "beginning",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "beginning",
+    "uuid": "53793af6-ceac-4719-a0d8-25a1a084687a",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}

@@ -7,10 +7,19 @@
     "longName": "beginning",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "fonts/Retro Computer_DEMO.ttf",
+                "name": "FONT_RETRO_COMPUTER_24",
+                "type": "font"
+            }
+        ]
     },
     "sdkVersion": "3",
     "shortName": "beginning",
+    "targetPlatforms": [
+        "basalt"
+    ],
     "uuid": "53793af6-ceac-4719-a0d8-25a1a084687a",
     "versionLabel": "1.0",
     "watchapp": {

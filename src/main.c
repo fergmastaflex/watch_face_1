@@ -48,7 +48,7 @@ static void main_window_unload(Window *window) {
   text_layer_destroy(s_seconds_layer);
 }
 
-static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
+static void up_single_click_handler() {
   background_color_count += 1;
   if(background_color_count == num_colors) {
     background_color_count = 0;        
@@ -56,8 +56,17 @@ static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
   window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
 }
 
+static void up_multi_click_handler() {
+  background_color_count -= 1;
+  if(background_color_count == 0) {
+    background_color_count = 64;        
+  }
+  window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
+}
+
 static void click_config_provider(void *context) {
-  window_single_click_subscribe(BUTTON_ID_UP, up_click_handler);
+  window_single_click_subscribe(BUTTON_ID_UP, up_single_click_handler);
+  window_multi_click_subscribe(BUTTON_ID_UP, 2, 2, 0, true, up_multi_click_handler);
 }
 
 static void update_time() {

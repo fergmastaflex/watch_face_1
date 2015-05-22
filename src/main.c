@@ -54,13 +54,21 @@ static void up_single_click_handler() {
   if(background_color_count == num_colors) {
     background_color_count = 0;        
   }
+  
+  if(background_color_count == text_color_count){
+    background_color_count += 1;
+  }
   window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
 }
 
 static void up_multi_click_handler() {
-  background_color_count -= 1;
   if(background_color_count == 0) {
     background_color_count = 64;        
+  }
+  background_color_count -= 1;
+  
+  if(background_color_count == text_color_count){
+    background_color_count -= 1;
   }
   window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
 }
@@ -79,10 +87,10 @@ static void down_single_click_handler() {
 }
 
 static void down_multi_click_handler() {
-  text_color_count -= 1;
   if(text_color_count == 0) {
     text_color_count = 64;        
   }
+  text_color_count -= 1;
   
   if(text_color_count == background_color_count){
     text_color_count -= 1;

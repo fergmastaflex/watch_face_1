@@ -5,6 +5,7 @@ static TextLayer *s_hours_layer;
 static TextLayer *s_minutes_layer;
 static TextLayer *s_seconds_layer;
 static int background_color_count = 0;
+static int text_color_count = 0;
 static uint8_t colors[64];
 static int num_colors = sizeof(colors)/sizeof(uint8_t);
 
@@ -64,9 +65,39 @@ static void up_multi_click_handler() {
   window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
 }
 
+static void down_single_click_handler() {
+  text_color_count += 1;
+  if(text_color_count == num_colors) {
+    text_color_count = 0;        
+  }
+  if(text_color_count == background_color_count){
+    text_color_count += 1;
+  }
+  text_layer_set_text_color(s_hours_layer, (GColor8)colors[text_color_count]);
+  text_layer_set_text_color(s_minutes_layer, (GColor8)colors[text_color_count]);
+  text_layer_set_text_color(s_seconds_layer, (GColor8)colors[text_color_count]);
+}
+
+static void down_multi_click_handler() {
+  text_color_count -= 1;
+  if(text_color_count == 0) {
+    text_color_count = 64;        
+  }
+  
+  if(text_color_count == background_color_count){
+    text_color_count -= 1;
+  }
+  text_layer_set_text_color(s_hours_layer, (GColor8)colors[text_color_count]);
+  text_layer_set_text_color(s_minutes_layer, (GColor8)colors[text_color_count]);
+  text_layer_set_text_color(s_seconds_layer, (GColor8)colors[text_color_count]);
+}
+
+
 static void click_config_provider(void *context) {
   window_single_click_subscribe(BUTTON_ID_UP, up_single_click_handler);
   window_multi_click_subscribe(BUTTON_ID_UP, 2, 2, 0, true, up_multi_click_handler);
+  window_single_click_subscribe(BUTTON_ID_DOWN, down_single_click_handler);
+  window_multi_click_subscribe(BUTTON_ID_DOWN, 2, 2, 0, true, down_multi_click_handler);
 }
 
 static void update_time() {

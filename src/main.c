@@ -1,10 +1,13 @@
 #include <pebble.h>
+#define BACKGROUND_PKEY 1
+#define TEXT_PKEY 2
+
 
 static Window *s_main_window;
 static TextLayer *s_hours_layer;
 static TextLayer *s_minutes_layer;
 static TextLayer *s_seconds_layer;
-static int background_color_count = 0;
+static int background_color_count;
 static int text_color_count = 0;
 static uint8_t colors[64];
 static int num_colors = sizeof(colors)/sizeof(uint8_t);
@@ -17,21 +20,23 @@ static void create_colors_array(uint8_t *colors) {
 };
 
 static void main_window_load(Window *window) {
+  text_color_count = persist_exists(TEXT_PKEY) ? persist_read_int(TEXT_PKEY) : 0;
+  
   s_hours_layer = text_layer_create(GRect(5, 30, 144, 50));
   text_layer_set_background_color(s_hours_layer, GColorClear);
-  text_layer_set_text_color(s_hours_layer, GColorWhite);
+  text_layer_set_text_color(s_hours_layer, (GColor8)colors[text_color_count]);
   text_layer_set_text(s_hours_layer, "00");
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_hours_layer));
   
   s_minutes_layer = text_layer_create(GRect(5, 70, 144, 50));
   text_layer_set_background_color(s_minutes_layer, GColorClear);
-  text_layer_set_text_color(s_minutes_layer, GColorWhite);
+  text_layer_set_text_color(s_minutes_layer, (GColor8)colors[text_color_count]);
   text_layer_set_text(s_minutes_layer, "00");
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_minutes_layer));
   
   s_seconds_layer = text_layer_create(GRect(5, 110, 144, 50));
   text_layer_set_background_color(s_seconds_layer, GColorClear);
-  text_layer_set_text_color(s_seconds_layer, GColorWhite);
+  text_layer_set_text_color(s_seconds_layer, (GColor8)colors[text_color_count]);
   text_layer_set_text(s_seconds_layer, "00");
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_seconds_layer));
   
@@ -135,6 +140,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void init() {
   s_main_window = window_create();
+  background_color_count = persist_exists(BACKGROUND_PKEY) ? persist_read_int(BACKGROUND_PKEY) : 0;
   tick_timer_service_subscribe(SECOND_UNIT, tick_handler);
   window_set_click_config_provider(s_main_window, click_config_provider);
   create_colors_array(colors);
@@ -142,12 +148,14 @@ static void init() {
     .load = main_window_load,
     .unload = main_window_unload
   });
-  window_set_background_color(s_main_window, (GColor8)colors[0]);
+  window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
   window_stack_push(s_main_window, true);
   update_time();
 }
 
 static void deinit() {
+  persist_write_int(BACKGROUND_PKEY, background_color_count);
+  persist_write_int(TEXT_PKEY, text_color_count);
   window_destroy(s_main_window);
 }
 

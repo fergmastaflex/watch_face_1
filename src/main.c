@@ -4,10 +4,16 @@ static Window *s_main_window;
 static TextLayer *s_hours_layer;
 static TextLayer *s_minutes_layer;
 static TextLayer *s_seconds_layer;
-static int color_count = 0;
-static uint8_t color[] = {GColorDarkCandyAppleRedARGB8, GColorIslamicGreenARGB8, GColorCelesteARGB8, GColorVividCeruleanARGB8, GColorRajahARGB8};
-static int num_colors = sizeof(color)/sizeof(uint8_t);
+static int background_color_count = 0;
+static uint8_t colors[64];
+static int num_colors = sizeof(colors)/sizeof(uint8_t);
 
+static void create_colors_array(uint8_t *colors) {
+  for(uint8_t byte=0; byte < 64; ++byte){
+    uint8_t alpha_byte=192;
+    colors[byte] = alpha_byte | byte;
+  };
+};
 
 static void main_window_load(Window *window) {
   s_hours_layer = text_layer_create(GRect(5, 30, 144, 50));
@@ -43,11 +49,11 @@ static void main_window_unload(Window *window) {
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  color_count += 1;
-  if(color_count == num_colors) {
-    color_count = 0;        
+  background_color_count += 1;
+  if(background_color_count == num_colors) {
+    background_color_count = 0;        
   }
-  window_set_background_color(s_main_window, (GColor8)color[color_count]);
+  window_set_background_color(s_main_window, (GColor8)colors[background_color_count]);
 }
 
 static void click_config_provider(void *context) {
@@ -83,11 +89,12 @@ static void init() {
   s_main_window = window_create();
   tick_timer_service_subscribe(SECOND_UNIT, tick_handler);
   window_set_click_config_provider(s_main_window, click_config_provider);
+  create_colors_array(colors);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = main_window_load,
     .unload = main_window_unload
   });
-  window_set_background_color(s_main_window, (GColor8)color[0]);
+  window_set_background_color(s_main_window, (GColor8)colors[0]);
   window_stack_push(s_main_window, true);
   update_time();
 }

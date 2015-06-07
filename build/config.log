@@ -1,0 +1,21 @@
+# project  configured on Sun Jun  7 13:19:25 2015 by
+# waf 1.7.11 (abi 98, python 20706f0 on darwin)
+# using /usr/local/Cellar/pebble-sdk/3.0/Pebble/waf configure build
+#
+----------------------------------------
+Setting top to
+/Users/ferg/pebble/watch_face_1
+----------------------------------------
+Setting out to
+/Users/ferg/pebble/watch_face_1/build
+----------------------------------------
+Found Pebble SDK for basalt in:
+/usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt
+----------------------------------------
+Checking for program gcc,cc
+arm-none-eabi-gcc
+find program=['gcc', 'cc'] paths='' var='CC' -> 'arm-none-eabi-gcc'
+----------------------------------------
+Checking for program ar
+arm-none-eabi-ar
+find program=['ar'] paths='' var='AR' -> 'arm-none-eabi-ar'

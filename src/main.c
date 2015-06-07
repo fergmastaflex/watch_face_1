@@ -1,14 +1,14 @@
 #include <pebble.h>
-#define BACKGROUND_PKEY 1
-#define TEXT_PKEY 2
+// #define BACKGROUND_PKEY 1
+// #define TEXT_PKEY 2
 
 
 static Window *s_main_window;
 static TextLayer *s_hours_layer;
 static TextLayer *s_minutes_layer;
 static TextLayer *s_seconds_layer;
-static int background_color_count;
-static int text_color_count = 0;
+static int background_color_count = 0;
+static int text_color_count = 63;
 static uint8_t colors[64];
 static int num_colors = sizeof(colors)/sizeof(uint8_t);
 

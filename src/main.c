@@ -1,6 +1,6 @@
 #include <pebble.h>
-// #define BACKGROUND_PKEY 1
-// #define TEXT_PKEY 2
+#define BACKGROUND_PKEY 1
+#define TEXT_PKEY 2
 
 
 static Window *s_main_window;

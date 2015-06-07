@@ -364,23 +364,17 @@ Discarded input sections
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_delete
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
- .text.persist_exists
-                0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_get_size
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_read_bool
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_read_data__deprecated
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
- .text.persist_read_int
-                0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_read_string__deprecated
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_write_bool
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_write_data__deprecated
-                0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
- .text.persist_write_int
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  .text.persist_write_string
                 0x0000000000000000        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
@@ -1032,7 +1026,7 @@ LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none
  .note.gnu.build-id
                 0x0000000000000084       0x24 linker stubs
 
-.text           0x00000000000000a8      0x687
+.text           0x00000000000000a8      0x6e3
  *(.text)
  .text          0x00000000000000a8       0x14 /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
  *(.text.*)
@@ -1055,143 +1049,152 @@ LOAD /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none
  .text.click_config_provider
                 0x00000000000004ac       0x54 src/main.c.11.o
  .text.startup.main
-                0x0000000000000500       0xa8 src/main.c.11.o
+                0x0000000000000500       0xe0 src/main.c.11.o
                 0x0000000000000500                main
  .text.app_event_loop
-                0x00000000000005a8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005a8                app_event_loop
+                0x00000000000005e0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000005e0                app_event_loop
  .text.fonts_get_system_font
-                0x00000000000005b4        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005b4                fonts_get_system_font
+                0x00000000000005ec        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000005ec                fonts_get_system_font
  .text.layer_add_child
-                0x00000000000005c0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005c0                layer_add_child
- .text.memset   0x00000000000005cc        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005cc                memset
+                0x00000000000005f8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000005f8                layer_add_child
+ .text.memset   0x0000000000000604        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000604                memset
+ .text.persist_exists
+                0x0000000000000610        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000610                persist_exists
+ .text.persist_read_int
+                0x000000000000061c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x000000000000061c                persist_read_int
+ .text.persist_write_int
+                0x0000000000000628        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000628                persist_write_int
  .text.strftime
-                0x00000000000005d8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005d8                strftime
+                0x0000000000000634        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000634                strftime
  .text.tick_timer_service_subscribe
-                0x00000000000005e4        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005e4                tick_timer_service_subscribe
+                0x0000000000000640        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000640                tick_timer_service_subscribe
  .text.window_create
-                0x00000000000005f0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005f0                window_create
+                0x000000000000064c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x000000000000064c                window_create
  .text.window_destroy
-                0x00000000000005fc        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000005fc                window_destroy
+                0x0000000000000658        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000658                window_destroy
  .text.window_get_root_layer
-                0x0000000000000608        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000608                window_get_root_layer
+                0x0000000000000664        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000664                window_get_root_layer
  .text.window_set_click_config_provider
-                0x0000000000000614        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000614                window_set_click_config_provider
+                0x0000000000000670        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000670                window_set_click_config_provider
  .text.window_set_window_handlers
-                0x0000000000000620        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000620                window_set_window_handlers
+                0x000000000000067c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x000000000000067c                window_set_window_handlers
  .text.window_stack_push
-                0x000000000000062c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x000000000000062c                window_stack_push
+                0x0000000000000688        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000688                window_stack_push
  .text.window_multi_click_subscribe
-                0x0000000000000638        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000638                window_multi_click_subscribe
+                0x0000000000000694        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000694                window_multi_click_subscribe
  .text.window_single_click_subscribe
-                0x0000000000000644        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000644                window_single_click_subscribe
+                0x00000000000006a0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006a0                window_single_click_subscribe
  .text.window_set_background_color
-                0x0000000000000650        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000650                window_set_background_color
+                0x00000000000006ac        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006ac                window_set_background_color
  .text.localtime
-                0x000000000000065c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x000000000000065c                localtime
+                0x00000000000006b8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006b8                localtime
  .text.text_layer_create
-                0x0000000000000668        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000668                text_layer_create
+                0x00000000000006c4        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006c4                text_layer_create
  .text.text_layer_destroy
-                0x0000000000000674        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000674                text_layer_destroy
+                0x00000000000006d0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006d0                text_layer_destroy
  .text.text_layer_get_layer
-                0x0000000000000680        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000680                text_layer_get_layer
+                0x00000000000006dc        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006dc                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x000000000000068c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x000000000000068c                text_layer_set_background_color
+                0x00000000000006e8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006e8                text_layer_set_background_color
  .text.text_layer_set_font
-                0x0000000000000698        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x0000000000000698                text_layer_set_font
+                0x00000000000006f4        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x00000000000006f4                text_layer_set_font
  .text.text_layer_set_text
-                0x00000000000006a4        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000006a4                text_layer_set_text
+                0x0000000000000700        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000700                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x00000000000006b0        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000006b0                text_layer_set_text_alignment
+                0x000000000000070c        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x000000000000070c                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x00000000000006bc        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000006bc                text_layer_set_text_color
- .text.time     0x00000000000006c8        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
-                0x00000000000006c8                time
+                0x0000000000000718        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000718                text_layer_set_text_color
+ .text.time     0x0000000000000724        0xc /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+                0x0000000000000724                time
  *(.rodata)
- .rodata        0x00000000000006d4       0x18 src/main.c.11.o
+ .rodata        0x0000000000000730       0x18 src/main.c.11.o
  *(.rodata*)
  .rodata.str1.1
-                0x00000000000006ec       0x43 src/main.c.11.o
+                0x0000000000000748       0x43 src/main.c.11.o
 
-.glue_7         0x0000000000000730        0x0
+.glue_7         0x000000000000078c        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000730        0x0
+.glue_7t        0x000000000000078c        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000730        0x0
+.vfp11_veneer   0x000000000000078c        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000730        0x0
+.v4_bx          0x000000000000078c        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000730        0x0
+.iplt           0x000000000000078c        0x0
  .iplt          0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x0000000000000730        0x0
+.rel.dyn        0x000000000000078c        0x0
  .rel.iplt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x0000000000000730       0x13
+.data           0x000000000000078c       0x13
  *(.data)
- .data          0x0000000000000730        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x0000000000000730        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x0000000000000730                __dso_handle
- .data          0x0000000000000734        0x0 src/main.c.11.o
- .data          0x0000000000000734        0x0 basalt/appinfo.auto.c.11.o
- .data          0x0000000000000734        0x0 /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
- .data          0x0000000000000734        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000000734        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x000000000000078c        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x000000000000078c        0x4 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x000000000000078c                __dso_handle
+ .data          0x0000000000000790        0x0 src/main.c.11.o
+ .data          0x0000000000000790        0x0 basalt/appinfo.auto.c.11.o
+ .data          0x0000000000000790        0x0 /usr/local/Cellar/pebble-sdk/3.0/Pebble/basalt/lib/libpebble.a(tmpZh9nU7pebble.o)
+ .data          0x0000000000000790        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x0000000000000790        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
  .data.buffer_hours.7000
-                0x0000000000000734        0x3 src/main.c.11.o
+                0x0000000000000790        0x3 src/main.c.11.o
  .data.buffer_minutes.7001
-                0x0000000000000737        0x3 src/main.c.11.o
- *fill*         0x000000000000073a        0x2 
+                0x0000000000000793        0x3 src/main.c.11.o
+ *fill*         0x0000000000000796        0x2 
  .data.text_color_count
-                0x000000000000073c        0x4 src/main.c.11.o
+                0x0000000000000798        0x4 src/main.c.11.o
  .data.buffer_seconds.7002
-                0x0000000000000740        0x3 src/main.c.11.o
+                0x000000000000079c        0x3 src/main.c.11.o
 
-.igot.plt       0x0000000000000744        0x0
+.igot.plt       0x00000000000007a0        0x0
  .igot.plt      0x0000000000000000        0x0 /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000744       0x54
+.bss            0x00000000000007a0       0x54
  *(.bss)
  *(.bss.*)
  .bss.s_seconds_layer
-                0x0000000000000744        0x4 src/main.c.11.o
+                0x00000000000007a0        0x4 src/main.c.11.o
  .bss.s_hours_layer
-                0x0000000000000748        0x4 src/main.c.11.o
+                0x00000000000007a4        0x4 src/main.c.11.o
  .bss.s_minutes_layer
-                0x000000000000074c        0x4 src/main.c.11.o
+                0x00000000000007a8        0x4 src/main.c.11.o
  .bss.background_color_count
-                0x0000000000000750        0x4 src/main.c.11.o
- .bss.colors    0x0000000000000754       0x40 src/main.c.11.o
+                0x00000000000007ac        0x4 src/main.c.11.o
+ .bss.colors    0x00000000000007b0       0x40 src/main.c.11.o
  .bss.s_main_window
-                0x0000000000000794        0x4 src/main.c.11.o
+                0x00000000000007f0        0x4 src/main.c.11.o
 
 DISCARD
  libc.a(*)
@@ -1224,13 +1227,13 @@ OUTPUT(/Users/ferg/pebble/watch_face_1/build/basalt/pebble-app.elf elf32-littlea
  .comment       0x0000000000000000       0x4f basalt/appinfo.auto.c.11.o
  .comment       0x0000000000000000       0x4f /usr/local/Cellar/pebble-toolchain/2.0/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000     0x1143
- .debug_info    0x0000000000000000      0xe2f src/main.c.11.o
- .debug_info    0x0000000000000e2f      0x314 basalt/appinfo.auto.c.11.o
+.debug_info     0x0000000000000000     0x123e
+ .debug_info    0x0000000000000000      0xf2a src/main.c.11.o
+ .debug_info    0x0000000000000f2a      0x314 basalt/appinfo.auto.c.11.o
 
-.debug_abbrev   0x0000000000000000      0x391
- .debug_abbrev  0x0000000000000000      0x2f3 src/main.c.11.o
- .debug_abbrev  0x00000000000002f3       0x9e basalt/appinfo.auto.c.11.o
+.debug_abbrev   0x0000000000000000      0x393
+ .debug_abbrev  0x0000000000000000      0x2f5 src/main.c.11.o
+ .debug_abbrev  0x00000000000002f5       0x9e basalt/appinfo.auto.c.11.o
 
 .debug_loc      0x0000000000000000      0x240
  .debug_loc     0x0000000000000000      0x240 src/main.c.11.o
@@ -1244,14 +1247,14 @@ OUTPUT(/Users/ferg/pebble/watch_face_1/build/basalt/pebble-app.elf elf32-littlea
 .debug_ranges   0x0000000000000000       0xd8
  .debug_ranges  0x0000000000000000       0xd8 src/main.c.11.o
 
-.debug_line     0x0000000000000000      0x454
- .debug_line    0x0000000000000000      0x327 src/main.c.11.o
- .debug_line    0x0000000000000327      0x12d basalt/appinfo.auto.c.11.o
+.debug_line     0x0000000000000000      0x505
+ .debug_line    0x0000000000000000      0x3d8 src/main.c.11.o
+ .debug_line    0x00000000000003d8      0x12d basalt/appinfo.auto.c.11.o
 
-.debug_str      0x0000000000000000      0x829
- .debug_str     0x0000000000000000      0x62f src/main.c.11.o
-                                        0x6c1 (size before relaxing)
- .debug_str     0x000000000000062f      0x1fa basalt/appinfo.auto.c.11.o
+.debug_str      0x0000000000000000      0x864
+ .debug_str     0x0000000000000000      0x673 src/main.c.11.o
+                                        0x70d (size before relaxing)
+ .debug_str     0x0000000000000673      0x1f1 basalt/appinfo.auto.c.11.o
                                         0x2d5 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x128
